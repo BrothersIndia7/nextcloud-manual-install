@@ -1,11 +1,5 @@
 FROM nextcloud/all-in-one:latest
 
-RUN ["docker run -d \
---init \
---sig-proxy=false \
---name nextcloud-aio-mastercontainer \
---restart always \
---publish 80:80 \
---publish 8080:8080 \
---publish 8443:8443 \
-nextcloud/all-in-one:latest"]
+RUN docker run --publish 80:80
+RUN docker run --publish 8080:8080
+RUN docker run --publish 8443:8443
