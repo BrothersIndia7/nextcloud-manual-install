@@ -1,11 +1,5 @@
-docker run -d \
---init \
---sig-proxy=false \
---name nextcloud-aio-mastercontainer \
---restart always \
---publish 80:80 \
---publish 8080:8080 \
---publish 8443:8443 \
---volume nextcloud_aio_mastercontainer:/mnt/docker-aio-config \
---volume /var/run/docker.sock:/var/run/docker.sock:ro \
-nextcloud/all-in-one:latest
+FROM nextcloud/all-in-one:latest
+
+RUN --expose -p 80:80
+RUN --expose -p 8080:8080
+RUN --expose -p 8443:8443
