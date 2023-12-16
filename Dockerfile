@@ -1,6 +1,6 @@
 FROM nextcloud/all-in-one:latest
 
-CMD ["docker run -d \
+RUN ["docker run -d \
 --init \
 --sig-proxy=false \
 --name nextcloud-aio-mastercontainer \
