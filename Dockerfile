@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
 COPY start.sh .
-COPY compose.yml .
+COPY compose.yaml .
 COPY .env .
 COPY update-yaml.sh .
 
